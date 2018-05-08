@@ -153,7 +153,7 @@ If our port number has no null bytes, we can simply PUSH it to the stack.
 push word 0x5c11
 ```
 
-This represents port 4444. Notice that I changed the endianness of 4444's hexadecimal representation. It would normally be `0x115c` however we must use network byte order. For us this just means swapping around the two hex bytes to `0x5c11`.  
+This represents port 4444. Notice that I changed the endianness of 4444's hexadecimal representation. It would normally be `0x115c` however we must use network byte order. In addition, because we're pushing to the stack we'll need to reverse the bytes. For us this just means swapping around the two hex bytes to `0x5c11`. When we push it onto the stack in this form its order will be correct. 
 
 Sometimes we'll want to use a port number that will contain null bytes. For example, if we wish to bind to port 43776 we will need to push `0xAB00` to the stack. If we wanted connect on a port below 256 we'll also need to adjust how we push the port number. Port 5 is represented as `0x0005`, that first null byte is not acceptable. 
 
