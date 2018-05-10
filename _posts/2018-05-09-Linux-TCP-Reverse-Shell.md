@@ -300,7 +300,7 @@ dup2_loop:
 ```python
 #!/usr/bin/env python3
 """
-x86 Linux TCP Bindshell Generator
+x86 Linux TCP Reverse Shell Generator
 Handles portnumbers and destination IPs which have NULs in their hex representation
 Usage: this_script.py <ip> <port>
 Author: fbcsec
