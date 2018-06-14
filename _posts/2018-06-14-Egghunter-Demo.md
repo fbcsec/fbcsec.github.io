@@ -36,7 +36,7 @@ Please prepend your second stage shellcode with the following bytes: \x74\x30\x3
 I then insert the egghunter payload, the egg, and the shellcode I want to run into my C demo file. This file has the shellcode with egg *somewhere* in memory. It executes the egghunter which should find it. 
 
 ## C Demo File
-```C
+```c
 //Egghunter Demo File
 #include <stdio.h>
 #include <string.h>
